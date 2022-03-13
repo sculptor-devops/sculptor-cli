@@ -1,7 +1,6 @@
 {
     "name": "sculptor-devops/sculptor-cli",
     "description": "Sculptor Devops Commandline",
-    "version": "0.9.1",
     "keywords": [
         "laravel",
         "console",
@@ -24,7 +23,7 @@
     "require": {
         "php": "^7.3|^8.0",
         "ext-posix": "*",
-        "enlightn/security-checker": "v1.9.0",
+        "enlightn/security-checker": "^v1.9.0",
         "guzzlehttp/guzzle": "^7.4",
         "illuminate/database": "^8.40",
         "illuminate/encryption": "^8.79",
@@ -54,7 +53,6 @@
         "phpunit/phpunit": "^9.5",
         "squizlabs/php_codesniffer": "^3.6"
     },
-
 
     "repositories": [
         {
