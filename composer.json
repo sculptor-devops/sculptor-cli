@@ -1,5 +1,5 @@
 {
-    "name": "sculptor-devops/foundation",
+    "name": "sculptor-devops/sculptor-cli",
     "description": "Sculptor Devops Commandline",
     "version": "0.9.0",
     "keywords": [
