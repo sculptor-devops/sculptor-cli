@@ -6,6 +6,7 @@
  *  file that was distributed with this source code.
 */
 
+const VERSION = '0.9.4';
 const THROTTLE_COUNT = 20;
 const THROTTLE_TIME_SPAN = 360;
 const SITES_HOME = '/home';
@@ -17,6 +18,6 @@ const ENGINE_VERSION = '8.0';
 const ENGINE_PATH = '/usr/bin/php';
 const SCHEMA_VERSION = 1;
 const DB_SERVER_PASSWORD = '/home/sculptor/.db_password';
-const UPDATES_URL = 'https://repo.packagist.org/p/sculptor-devops/sculptor-cli.json';
+const UPDATES_URL = 'https://repo.packagist.org/p2/sculptor-devops/sculptor-cli.json';
 const UPDATES_DOWNLOAD_URL = 'https://github.com/sculptor-devops/sculptor-cli/releases/latest/download/sculptor-cli';
-const UPDATES_PACKAGE = 'installer';
+const UPDATES_PACKAGE = 'sculptor-cli';

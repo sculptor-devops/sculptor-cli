@@ -38,7 +38,10 @@ class Upgrade
 
         $payload = $updates->json();
 
-        $version = collect(Arr::get($payload, 'packages.sculptor-devops/' . UPDATES_PACKAGE, []))->keys()->sort()->last();
+        $version = collect(Arr::get($payload, 'packages.sculptor-devops/' . UPDATES_PACKAGE, []))
+            ->map(fn($release) => Arr::get($release, 'version'))
+            ->sort()
+            ->last();
 
         $version = Str::replaceFirst('v', '', $version);
 

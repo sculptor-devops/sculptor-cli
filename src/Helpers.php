@@ -38,11 +38,11 @@ if (!function_exists('composerVersion')) {
 
         $payload = json_decode($content, true);
 
-        if ($payload['version']) {
+        if (array_key_exists('version', $payload)){
             return $payload['version'];
         }
 
-        return null;
+        return VERSION;
     }
 }
 
