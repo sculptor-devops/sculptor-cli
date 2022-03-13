@@ -1,0 +1,44 @@
+version:  1
+enabled: true
+name: ''
+aliases: ''
+engine: '8.0'
+www: true
+user: 'www'
+public: 'public'
+template: 'laravel'
+status: 'new'
+token: ''
+created: ''
+deployed: ''
+
+database:
+  name: ''
+  user: ''
+
+certificate:
+  type: 'self-signed'
+  email: 'me@example.com'
+
+git:
+  url: 'https://github.com/laravel/laravel'
+  branch: 'master'
+  provider: 'github'
+
+deploy:
+  engine: 'deployer'
+  command: 'deploy'
+  install: 'deploy:install'
+
+crontab:
+  # - schedule: '* * * * *'
+  #   command: '{PHP} {CURRENT}/artisan schedule:run >> /dev/null 2>&1'
+
+workers:
+  # - prefix: 'worker'
+  #  template: 'worker.conf'
+  #  command: '{PHP} {CURRENT}/artisan queue:work --daemon'
+  #  count: 1
+
+
+

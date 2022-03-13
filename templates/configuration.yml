@@ -1,0 +1,55 @@
+version: 1
+log_level: debug
+root: '/home/www/sites'
+webhook: ''
+
+php:
+  version: '8.0'
+  user: 'www'
+
+database:
+  default: 'mysql'
+  host: '127.0.0.1'
+  port: 3306
+  password: '/home/sculptor/.db_password'
+
+security:
+  key: ''
+  password:
+    min: 20
+    max: 30
+
+monitors:
+  samples: 60
+  format: 'json'
+  cron: '* * * * *'
+  disks:
+    - name: 'sda'
+      root: '/'
+
+backup:
+  cron: '0 0 * * *'
+  compression: 'zip'
+  temp: '/tmp'
+
+  archive:
+    driver: 'local'
+    path: '/tmp/backups'
+
+  rotation:
+    cron: '0 1 * * *'
+    policy: 'days'
+    count: 7
+
+  drivers:
+    dropbox:
+      case_sensitive: false
+      key: 'xxxxxxxxxxxxx_none'
+
+    s3:
+      key: 'xxxxxxxxxxxxx_none'
+      secret: 'xxxxxxxxxxxxx_none'
+      bucket: 'bucket'
+      region: 'region'
+      endpoint: 'endpoint'
+

@@ -1,0 +1,22 @@
+version: 1
+name: ''
+enabled: true
+resource: ''
+target: ''
+status: 'new'
+last: ''
+error: ''
+temp: '/tmp/backups'
+checksum: 'sha1'
+
+cron: '0 0 * * *'
+compression: 'zip'
+
+archive:
+  driver: 'local'
+  path: '/tmp/backups'
+
+rotation:
+  cron: '0 1 * * *'
+  policy: 'days'
+  count: 7

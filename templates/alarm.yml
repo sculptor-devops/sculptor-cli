@@ -1,0 +1,34 @@
+version: 1
+name: ''
+enabled: true
+error:
+cron: '* * * * *'
+
+action:
+  method: 'webhook'
+  message: 'none'
+  parameters:
+    url: 'https://example.org/test'
+    verb: 'post'
+
+subject:
+  method: 'monitor'
+  last: 0
+  parameters:
+    name: 'cpu.load'
+
+condition:
+  method: 'compare'
+  parameters:
+    condition: 'greater'
+    threshold: 1
+
+rearm:
+  method: 'auto'
+  parameters:
+
+status:
+  alarmed: false
+  previous: false
+  at:
+  last:

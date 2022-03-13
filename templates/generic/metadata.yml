@@ -1,0 +1,9 @@
+name: "Generic PHP application",
+version: 1
+engine:
+    type: "php"
+    version: "8.0"
+    deploy: "deployer"
+    webserver: "nginx"
+
+

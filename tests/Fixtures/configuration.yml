@@ -1,0 +1,17 @@
+version: 1
+log-level: debug
+root: '/tmp/sites'
+
+php:
+  version: '8.0'
+  user: 'www'
+
+database:
+  db_password: '/home/sculptor/.db_password'
+  default: 'mysql'
+
+security:
+  key: ''
+  password:
+    min: 20
+    max: 30

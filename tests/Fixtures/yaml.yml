@@ -1,0 +1,8 @@
+version: 1
+configuration:
+  string: 'test'
+  bool: true
+  int: 10
+  array:
+    a: 1
+    b: 2
