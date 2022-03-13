@@ -17,8 +17,6 @@ const ENGINE_VERSION = '8.0';
 const ENGINE_PATH = '/usr/bin/php';
 const SCHEMA_VERSION = 1;
 const DB_SERVER_PASSWORD = '/home/sculptor/.db_password';
-// const UPDATES_URL = 'https://repo.packagist.org/p/sculptor-devops/sculptor-cli.json';
-
-const UPDATES_URL = 'https://repo.packagist.org/p/sculptor-devops/installer.json';
-const UPDATES_DOWNLOAD_URL = 'https://github.com/sculptor-devops/installer/releases/latest/download/installer';
+const UPDATES_URL = 'https://repo.packagist.org/p/sculptor-devops/sculptor-cli.json';
+const UPDATES_DOWNLOAD_URL = 'https://github.com/sculptor-devops/sculptor-cli/releases/latest/download/sculptor-cli';
 const UPDATES_PACKAGE = 'installer';
