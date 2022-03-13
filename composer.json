@@ -1,21 +1,19 @@
 {
-    "name": "laravel-zero/laravel-zero",
+    "name": "sculptor-devops/foundation",
     "description": "Sculptor Devops Commandline",
     "version": "0.9.0",
     "keywords": [
-        "framework",
         "laravel",
-        "laravel zero",
         "console",
         "cli",
         "devops"
     ],
     "type": "project",
     "license": "MIT",
-    "homepage": "https://github.com/sculptor-devops",
+    "homepage": "https://github.com/sculptor-devops/sculptor-cli",
     "support": {
-        "issues": "https://github.com/sculptor-devops/sculptor/issues",
-        "source": "https://github.com/sculptor-devops/sculptor"
+        "issues": "https://github.com/sculptor-devops/sculptor-cli/issues",
+        "source": "https://github.com/sculptor-devops/sculptor-cli"
     },
     "authors": [
         {
