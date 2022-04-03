@@ -4,6 +4,8 @@ namespace Sculptor\Agent\Support\Command;
 
 use Exception;
 use Illuminate\Console\Scheduling\Schedule;
+use JetBrains\PhpStorm\ArrayShape;
+use JetBrains\PhpStorm\Pure;
 use LaravelZero\Framework\Commands\Command;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
@@ -162,5 +164,30 @@ class Base extends Command
     public function schedule(Schedule $schedule): void
     {
         // $schedule->command(static::class)->everyMinute();
+    }
+
+    #[Pure]
+    public function formatRowsShown(array $rows): array
+    {
+        $values = [];
+
+        foreach ($rows as $row) {
+            $values[] = $this->formatRowShown($row[0], $row[1], $row[2], $row[3]);
+        }
+
+        return $values;
+    }
+
+    #[Pure] #[ArrayShape(['name' => "string", 'value' => "string", 'readonly' => "string"])]
+    public function formatRowShown(string $name, string $value, string $type, bool $readonly): array
+    {
+        $value = match ($type) {
+            'yesNo' => $this->yesNo($value),
+            'noYes' => $this->noYes($value),
+            'empty' => $this->empty($value),
+            default => $value
+        };
+
+        return ['name' => $name, 'value' => $value, 'readonly' => $this->noYes($readonly)];
     }
 }

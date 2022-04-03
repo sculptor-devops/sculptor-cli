@@ -1,7 +1,11 @@
 name: "Standard Laravel application",
 version: 1
+url:
 engine:
   type: "php"
   version: "8.0"
-  deploy: "deployer"
+  deploy: "deployer-6.x"
+  composer: "2.2.x"
   webserver: "nginx"
+prepare:
+# - command: "domain:env {name} SOME_KEY SOME_VALUE"

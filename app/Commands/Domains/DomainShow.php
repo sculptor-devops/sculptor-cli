@@ -55,43 +55,43 @@ class DomainShow extends Base
      */
     private function showSingle(Domain $domain): void
     {
-        $values = [
-            ['name' => 'enabled', 'value' => $this->yesNo($domain->enabled)],
-            [ 'name' => '<<readonly>>', 'value' => $domain->name()],
-            ['name' => 'www', 'value' => $this->yesNo($domain->www)],
-            ['name' => 'aliases', 'value' => $this->empty($domain->aliases)],
-            ['name' => 'template', 'value' => $domain->template],
-            ['name' => '<<readonly>>', 'value' => $domain->status],
+        $values = $this->formatRowsShown([
+            ['enabled', $domain->enabled, 'yesNo', false],
+            ['name', $domain->name(), '', true],
+            ['www', $domain->www, 'yesNo', false],
+            ['aliases', $domain->aliases, 'empty', false],
+            ['template', $domain->template, '', false],
+            ['status', $domain->status, '', true],
 
-            ['name' => 'certificate.type', 'value' => $domain->certificateType],
-            ['name' => 'certificate.email', 'value' => $this->empty($domain->certificateEmail)],
+            ['certificate.type', $domain->certificateEmail, 'empty', false],
+            ['certificate.type', $domain->certificateType, 'empty', false],
 
-            ['name' => 'user', 'value' => $domain->user],
-            ['name' => 'engine', 'value' => $domain->engine],
-            ['name' => '<<readonly>>', 'value' => $domain->root()],
+            ['user', $domain->user, '', false],
+            ['engine', $domain->engine, '', false],
+            ['root', $domain->root(), '', true],
 
-            ['name' => 'database.name', 'value' => $this->empty($domain->databaseName)],
-            ['name' => 'database.user', 'value' => $this->empty($domain->databaseUser)],
+            ['database.name', $domain->databaseName, 'noYes', false],
+            ['database.user', $domain->databaseUser, 'noYes', false],
 
-            ['name' => 'deploy.command', 'value' => $domain->deployCommand],
-            ['name' => 'deploy.install', 'value' => $domain->deployInstall],
-            ['name' => 'webhook.url', 'value' => $this->empty($domain->webhook())],
+            ['deploy.command', $domain->deployCommand, '', false],
+            ['deploy.install', $domain->deployInstall, '', false],
+            ['webhook.url', $domain->webhook(), 'empty', true],
 
-            ['name' => 'git.url', 'value' => $this->empty($domain->gitUrl)],
-            ['name' => 'git.branch', 'value' => $this->empty($domain->gitBranch)],
+            ['git.url', $domain->gitUrl, 'empty', false],
+            ['git.branch', $domain->gitBranch, 'empty', true],
 
-            ['name' => '<<specific command>>', 'value' => count($domain->crontabArray)],
-            ['name' => '<<specific command>>', 'value' => count($domain->workersArray)],
+            ['valid', $domain->validate(), 'yesNo', true],
+            ['created', $domain->created, 'empty', true],
+            ['deployed', $domain->deployed, 'empty', true],
+        ]);
 
-            ['name' => '<<readonly>>', 'value' => $this->yesNo($domain->validate())],
-            ['name' => '<<readonly>>', 'value' => $this->empty($domain->created)],
-            ['name' => '<<readonly>>', 'value' => $this->empty($domain->deployed)]
-        ];
-
-        $this->table(['Name', 'Value'], $values);
+        $this->table(['Name', 'Value', 'Readonly'], $values);
 
         $this->warn("Name column indicate the key to use when change value with setup command.");
         $this->warn("Example: use domain:setup {$domain->name()} <<key>> <<value>>");
+        $this->warn("Execute command: {$domain->bin('php')} SOME_COMMAND");
+        $this->warn("Execute composer: {$domain->bin('composer')} SOME_COMMAND");
+        $this->warn("Execute deploy: {$domain->bin('dep')} SOME_COMMAND");
     }
 
     private function showAll(array $all): void

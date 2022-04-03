@@ -9,6 +9,7 @@ use Sculptor\Agent\Actions\Alarms\Methods\Webhook;
 use Sculptor\Agent\Actions\Alarms\Rearms\Auto;
 use Sculptor\Agent\Actions\Alarms\Rearms\Manual;
 use Sculptor\Agent\Actions\Alarms\Subjects\Backup;
+use Sculptor\Agent\Actions\Alarms\Subjects\Certificate;
 use Sculptor\Agent\Actions\Alarms\Subjects\Monitor;
 use Sculptor\Agent\Actions\Alarms\Subjects\ResponseStatus;
 use Sculptor\Agent\Actions\Alarms\Subjects\ResponseTime;
@@ -152,7 +153,8 @@ return [
             Monitor::class,
             ResponseStatus::class,
             ResponseTime::class,
-            Security::class
+            Security::class,
+            Certificate::class
         ],
     ]
 ];

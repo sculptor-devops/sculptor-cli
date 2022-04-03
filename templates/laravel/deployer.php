@@ -58,10 +58,6 @@ set('bin/composer', function () {
     return '{PATH}/bin/composer';
 });
 
-set('bin/composer', function () {
-    return '/home/www/sites/example.net/bin/composer';
-});
-
 localhost()
     ->set('deploy_path', '{PATH}')
     ->set('http_user', '{USER}');

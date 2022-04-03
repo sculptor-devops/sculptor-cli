@@ -113,12 +113,14 @@ class AlarmShow extends Base
                 $this->noYes($alarm->statusAlarmed, 'On', 'Off'),
                 $this->empty($alarm->statusAt),
                 CronTranslator::translate($alarm->cron),
+                $this->empty($alarm->subjectMethod),
                 $alarm->actionMethod,
                 $this->empty($alarm->error),
+                $this->empty($alarm->statusLast),
             ];
         }
 
-        $this->table(['Enabled', 'name', 'Status', 'At', 'Cron', 'Action', 'Error'], $tabled);
+        $this->table(['Enabled', 'name', 'Status', 'At', 'Cron', 'Subject', 'Action', 'Error', 'Checked'], $tabled);
 
         $this->info("{$count} Alarms");
 

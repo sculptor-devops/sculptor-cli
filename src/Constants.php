@@ -6,7 +6,7 @@
  *  file that was distributed with this source code.
 */
 
-const VERSION = '0.9.4';
+const VERSION = '0.9.5';
 const THROTTLE_COUNT = 20;
 const THROTTLE_TIME_SPAN = 360;
 const SITES_HOME = '/home';
