@@ -58,7 +58,6 @@ class Formatter
             'iostat' => "{$value} kB",
             default => $value,
         };
-
     }
 
     private function uptime(int $value): string

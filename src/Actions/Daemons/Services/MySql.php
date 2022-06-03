@@ -13,17 +13,17 @@ use Sculptor\Agent\Enums\DaemonGroupType;
 
 class MySql implements Service
 {
-    function name(): string
+    public function name(): string
     {
         return 'mysql';
     }
 
-    function package(): string
+    public function package(): string
     {
         return 'mysql-server';
     }
 
-    function group(): string
+    public function group(): string
     {
         return DaemonGroupType::DATABASE;
     }

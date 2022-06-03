@@ -1,5 +1,6 @@
 <?php
 
+namespace Sculptor\Agent\Actions\Contracts;
 
 /**
  * (c) Alessandro Cappellozza <alessandro.cappellozza@gmail.com>

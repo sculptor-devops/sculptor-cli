@@ -81,7 +81,7 @@ class Entity implements EntityInterface
             return $this->content->getBool($normalized->value);
         }
 
-        if ($normalized->type =='int') {
+        if ($normalized->type == 'int') {
             return $this->content->getInt($normalized->value);
         }
 
@@ -135,10 +135,10 @@ class Entity implements EntityInterface
         return true;
     }
 
-    public function _name(): string
-{
-    return $this->content->filename();
-}
+    public function filename(): string
+    {
+        return $this->content->filename();
+    }
 
     public function missing(): array
     {

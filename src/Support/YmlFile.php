@@ -91,7 +91,7 @@ class YmlFile
     {
         return collect(Arr::dot($this->content))->reject(function ($value, $key) {
             return Str::startsWith($key, $this->hidden);
-        })->mapWithKeys(function($value, $key) {
+        })->mapWithKeys(function ($value, $key) {
             if (in_array($key, $this->masked)) {
                 return [ $key => $this->mask($value) ];
             }

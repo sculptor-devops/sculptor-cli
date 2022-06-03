@@ -73,7 +73,7 @@ class Writer
 
         $content[] = ['ts' => time() ] + $data;
 
-        Filesystem::put($filename, json_encode($content,JSON_PRETTY_PRINT));
+        Filesystem::put($filename, json_encode($content, JSON_PRETTY_PRINT));
     }
 
     /**
@@ -108,4 +108,3 @@ class Writer
         Filesystem::put($filename, $serialized);
     }
 }
-

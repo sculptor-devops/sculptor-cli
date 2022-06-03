@@ -50,7 +50,7 @@ class Collector
             if ($key == $name) {
                 return $value;
             }
-       }
+        }
 
         throw new Exception("Monitor $name not found");
     }

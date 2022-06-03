@@ -29,12 +29,12 @@ class ResponseStatus extends Validable implements Subject
     /**
      * @throws Exception
      */
-    function value(): float
+    public function value(): float
     {
         return HttpClient::make($this->parameters)->result()->status();
     }
 
-    function parameters(Parameters $parameters): Subject
+    public function parameters(Parameters $parameters): Subject
     {
         parent::parameters($parameters);
 

@@ -32,7 +32,6 @@ class Setup
         $alarm = $this->alarms->find($name);
 
         if ($this->parameters($alarm, $key, $value)) {
-
             $alarm->save();
 
             return;
@@ -68,7 +67,7 @@ class Setup
                 return true;
 
             case 'condition.parameters':
-                $condition= $this->conditions->make($alarm->conditionMethod);
+                $condition = $this->conditions->make($alarm->conditionMethod);
 
                 $condition->parameters(Parameters::parse($value));
 

@@ -49,11 +49,13 @@ class Bin implements DomainInterface
     {
         $this->debug($domain, $options, 'prepare');
 
-        foreach ([
+        foreach (
+            [
                      'composer' => "{PHP} /usr/bin/composer $@",
                      'dep' => "{PHP} /usr/local/bin/dep $@",
                      'php' => "{PHP} $@"
-                 ] as $name => $content) {
+                 ] as $name => $content
+        ) {
             $filename = $domain->bin($name);
 
             $compiled = $this->compiler

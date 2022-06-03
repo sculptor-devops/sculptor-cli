@@ -14,7 +14,6 @@ use Sculptor\Agent\Support\Folders;
 
 class Blueprint implements Strategy
 {
-
     public function __construct(private Folders $folders)
     {
         //

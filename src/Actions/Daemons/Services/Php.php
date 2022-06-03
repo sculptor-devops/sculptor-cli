@@ -2,7 +2,6 @@
 
 namespace Sculptor\Agent\Actions\Daemons\Services;
 
-
 use Sculptor\Agent\Actions\Contracts\Service;
 use Sculptor\Agent\Enums\DaemonGroupType;
 
@@ -18,17 +17,17 @@ class Php implements Service
         //
     }
 
-    function name(): string
+    public function name(): string
     {
         return "php{$this->version}-fpm";
     }
 
-    function package(): string
+    public function package(): string
     {
         return "php{$this->version}-fpm";
     }
 
-    function group(): string
+    public function group(): string
     {
         return DaemonGroupType::WEB;
     }

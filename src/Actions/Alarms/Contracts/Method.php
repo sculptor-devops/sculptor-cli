@@ -15,5 +15,5 @@ interface Method
 {
     public function name(): string;
     public function exec(Context $context): int;
-    function parameters(Parameters $parameters): Method;
+    public function parameters(Parameters $parameters): Method;
 }

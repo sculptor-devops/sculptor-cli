@@ -41,9 +41,9 @@ class Check extends Base
             return 1;
         }
 
-        $updated = $update->run();
+        $updated = $update();
 
-        $deploys = $deploy->run();
+        $deploys = $deploy();
 
         $this->info('Updated ' . $this->glue($updated));
 

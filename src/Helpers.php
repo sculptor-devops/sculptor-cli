@@ -38,7 +38,7 @@ if (!function_exists('composerVersion')) {
 
         $payload = json_decode($content, true);
 
-        if (array_key_exists('version', $payload)){
+        if (array_key_exists('version', $payload)) {
             return $payload['version'];
         }
 
@@ -85,7 +85,6 @@ if (!function_exists('sameKeys')) {
         }
 
         foreach ($b as $key => $bValue) {
-
             if (!in_array($bValue, $a, true)) {
                 return false;
             }
@@ -93,7 +92,6 @@ if (!function_exists('sameKeys')) {
             if (count(array_keys($a, $bValue, true)) !== count(array_keys($b, $bValue, true))) {
                 return false;
             }
-
         }
 
         return true;

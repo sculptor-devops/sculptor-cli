@@ -2,16 +2,13 @@
 
 namespace Sculptor\Agent\Actions\Domains\Stages;
 
-
 use Exception;
 use Sculptor\Agent\Actions\Contracts\Domain as DomainInterface;
 use Sculptor\Agent\Actions\Support\Logging;
 use Sculptor\Agent\Enums\DaemonGroupType;
 use Sculptor\Agent\Repositories\Entities\Domain as Entity;
-
 use Sculptor\Agent\Actions\Support\Daemons;
 use Sculptor\Foundation\Services\Daemons as Service;
-
 
 /**
  * (c) Alessandro Cappellozza <alessandro.cappellozza@gmail.com>

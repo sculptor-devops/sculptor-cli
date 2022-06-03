@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sculptor\Agent\Repositories\Entities;
-
 
 use Exception;
 use Sculptor\Agent\Actions\Alarms\Support\Parameters;

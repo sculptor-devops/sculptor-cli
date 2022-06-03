@@ -99,5 +99,19 @@
     "prefer-stable": true,
     "bin": [
         "sculptor-cli"
-    ]
+    ],
+    "scripts": {
+        "test": [
+            "./vendor/bin/phpunit --testdox"
+        ],
+        "phpcs": [
+            "./vendor/bin/phpcs --standard=phpcs.xml ./src"
+        ],
+        "phpcs-fix": [
+            "./vendor/bin/phpcbf --standard=phpcs.xml ./src"
+        ],
+        "phpstan": [
+            "./vendor/bin/phpstan analyse src --level 9"
+        ]
+    }
 }

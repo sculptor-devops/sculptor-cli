@@ -36,7 +36,7 @@ class Bash extends Validable implements Method
             ->env($context->env())
             ->run(explode(' ', $command));
 
-        return $response->code();
+        return $response->code() ?? 0;
     }
 
     public function name(): string
@@ -44,7 +44,7 @@ class Bash extends Validable implements Method
         return 'bash';
     }
 
-    function parameters(Parameters $parameters): Method
+    public function parameters(Parameters $parameters): Method
     {
         parent::parameters($parameters);
 

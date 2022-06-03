@@ -16,5 +16,5 @@ interface Rearm
 
     public function act(bool $current, bool $last): bool;
 
-    function parameters( Parameters $parameters): Rearm;
+    public function parameters(Parameters $parameters): Rearm;
 }

@@ -23,13 +23,14 @@ class Context
     {
         $result = [];
 
-        foreach ([
+        foreach (
+            [
                      'subject' => $this->alarm->subjectParameters(),
                      'rearm' => $this->alarm->rearmParameters(),
                      'condition' => $this->alarm->conditionParameters(),
                      'action' => $this->alarm->actionParameters()
-                 ] as $name => $parameters) {
-
+                 ] as $name => $parameters
+        ) {
             foreach ($parameters->keys() as $key) {
                 $result["$name.$key"] = $parameters->get($key);
             }

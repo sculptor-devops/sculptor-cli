@@ -21,7 +21,7 @@ class SelfSigned implements Certificate
         //
     }
 
-    function name(): string
+    public function name(): string
     {
         return CertificatesTypes::SELF_SIGNED;
     }
@@ -29,7 +29,7 @@ class SelfSigned implements Certificate
     /**
      * @throws Exception
      */
-    function register(Domain $domain, int $days = 3650): void
+    public function register(Domain $domain, int $days = 3650): void
     {
         $name = $domain->name();
 
@@ -57,17 +57,17 @@ class SelfSigned implements Certificate
             );
     }
 
-    function pre(Domain $domain): void
+    public function pre(Domain $domain): void
     {
         // TODO: Implement pre() method.
     }
 
-    function deploy(Domain $domain): void
+    public function deploy(Domain $domain): void
     {
         // TODO: Implement deploy() method.
     }
 
-    function delete(Domain $domain): void
+    public function delete(Domain $domain): void
     {
         // TODO: Implement delete() method.
     }
@@ -75,7 +75,7 @@ class SelfSigned implements Certificate
     /**
      * @throws Exception
      */
-    function files(Domain $domain): array
+    public function files(Domain $domain): array
     {
         return [
             'certificate' => $domain->certs("{$domain->name()}.crt"),

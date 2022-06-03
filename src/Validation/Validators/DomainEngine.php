@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sculptor\Agent\Validation\Validators;
-
 
 use App\Rules\Engine;
 use App\Rules\Vcs;

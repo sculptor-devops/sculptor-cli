@@ -53,7 +53,7 @@ class Env implements DomainInterface
      */
     public function prepare(Domain $domain, array $options = null): array
     {
-        $this->debug($domain, $options,'prepare');
+        $this->debug($domain, $options, 'prepare');
 
         $database = [
             '{DATABASE}' => 'laravel',
@@ -138,6 +138,6 @@ class Env implements DomainInterface
             $cipher = $app['cipher'];
         }
 
-        return 'base64:'.base64_encode(Encrypter::generateKey($cipher));
+        return 'base64:' . base64_encode(Encrypter::generateKey($cipher));
     }
 }

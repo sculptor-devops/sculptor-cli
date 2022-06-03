@@ -13,17 +13,17 @@ use Sculptor\Agent\Enums\DaemonGroupType;
 
 class Supervisor implements Service
 {
-    function name(): string
+    public function name(): string
     {
         return 'supervisor';
     }
 
-    function package(): string
+    public function package(): string
     {
         return 'supervisor';
     }
 
-    function group(): string
+    public function group(): string
     {
         return DaemonGroupType::QUEUE;
     }

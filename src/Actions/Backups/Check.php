@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sculptor\Agent\Actions\Backups;
-
 
 use Carbon\Carbon;
 use Cron\CronExpression;

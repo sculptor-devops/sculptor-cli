@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sculptor\Agent\Actions\Backups\Contracts;
-
 
 /**
  * (c) Alessandro Cappellozza <alessandro.cappellozza@gmail.com>

@@ -12,10 +12,10 @@ use Sculptor\Agent\Repositories\Entities\Domain;
 
 interface Certificate
 {
-    function name(): string;
-    function register(Domain $domain, int $days = 3650): void;
-    function pre(Domain $domain): void;
-    function deploy(Domain $domain): void;
-    function delete(Domain $domain): void;
-    function files(Domain $domain): array;
+    public function name(): string;
+    public function register(Domain $domain, int $days = 3650): void;
+    public function pre(Domain $domain): void;
+    public function deploy(Domain $domain): void;
+    public function delete(Domain $domain): void;
+    public function files(Domain $domain): array;
 }

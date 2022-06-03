@@ -1,4 +1,5 @@
 <?php
+
 namespace Sculptor\Agent\Actions\Backups\Dumpers;
 
 use Sculptor\Agent\Actions\Backups\Contracts\Dumper;

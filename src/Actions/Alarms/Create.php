@@ -2,7 +2,6 @@
 
 namespace Sculptor\Agent\Actions\Alarms;
 
-
 use Exception;
 use Sculptor\Agent\Actions\Support\Logging;
 use Sculptor\Agent\Repositories\Alarms;

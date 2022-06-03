@@ -53,7 +53,7 @@ class HttpClient
 
         $accept = $this->has('accept', 'application/json');
 
-        $timeout = $this->has('timeout','10');
+        $timeout = $this->has('timeout', '10');
 
         $client = Http::timeout($timeout);
 

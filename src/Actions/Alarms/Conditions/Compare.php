@@ -23,7 +23,7 @@ class Compare extends Validable implements Condition
         'condition'
     ];
 
-    function name(): string
+    public function name(): string
     {
         return 'compare';
     }
@@ -31,7 +31,7 @@ class Compare extends Validable implements Condition
     /**
      * @throws Exception
      */
-    function check(float $current, float $last): bool
+    public function check(float $current, float $last): bool
     {
         $threshold = Converter::from($this->parameters->get('threshold'));
 
@@ -44,11 +44,11 @@ class Compare extends Validable implements Condition
             'greaterequal', 'gte' => $current >= $threshold,
             'lessequal', 'lte' => $current <= $threshold,
             'different', 'dif' => $current != $threshold,
-            default => Throw new InvalidArgumentException("Invalid compare condition $condition")
+            default => throw new InvalidArgumentException("Invalid compare condition $condition")
         };
     }
 
-    function parameters(Parameters $parameters): Condition
+    public function parameters(Parameters $parameters): Condition
     {
         parent::parameters($parameters);
 

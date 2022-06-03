@@ -12,9 +12,9 @@ use Sculptor\Agent\Actions\Alarms\Support\Parameters;
 
 interface Condition
 {
-    function name(): string;
+    public function name(): string;
 
-    function check(float $current, float $last): bool;
+    public function check(float $current, float $last): bool;
 
-    function parameters( Parameters $parameters): Condition;
+    public function parameters(Parameters $parameters): Condition;
 }

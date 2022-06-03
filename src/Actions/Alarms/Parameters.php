@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Sculptor\Agent\Actions\Alarms;
 
 use Sculptor\Agent\Actions\Alarms\Factories\Conditions;
@@ -24,13 +23,14 @@ class Parameters
     {
         $result = [];
 
-        foreach ([
+        foreach (
+            [
                      'method' => $this->methods,
                      'condition' => $this->conditions,
                      'subject' => $this->subjects,
                      'rearm' => $this->rearms
-                 ] as $name => $driver) {
-
+                 ] as $name => $driver
+        ) {
             foreach ($driver->keys() as $key) {
                 $resolved = $driver->make($key);
 
@@ -40,5 +40,4 @@ class Parameters
 
         return $result;
     }
-
 }

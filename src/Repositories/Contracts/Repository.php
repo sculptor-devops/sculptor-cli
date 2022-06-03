@@ -17,11 +17,11 @@ use Sculptor\Agent\Support\YmlFile;
  */
 abstract class Repository
 {
-    abstract function path(): string;
+    abstract public function path(): string;
 
-    abstract function name(): string;
+    abstract public function name(): string;
 
-    abstract function make(YmlFile $file);
+    abstract public function make(YmlFile $file);
 
     private function fileName(string $name): string
     {

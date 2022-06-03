@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Sculptor\Agent\Actions\Alarms\Support;
 
 use InvalidArgumentException;
@@ -17,7 +16,7 @@ class Validable
 
     public array $properties = [];
 
-    function parameters(Parameters $parameters)
+    public function parameters(Parameters $parameters)
     {
         if (!sameKeys($this->properties, $parameters->keys())) {
             $diff = join(', ', array_diff($this->properties, $parameters->keys()));

@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sculptor\Agent\Repositories\Entities;
-
 
 use Exception;
 use Sculptor\Agent\Configuration;
@@ -52,7 +50,7 @@ class Database extends Entity implements EntityInterface
     public function delete(string $user): void
     {
         $users = collect($this->users())
-            ->filter(fn(User $item) => !$item->equal($user) )
+            ->filter(fn(User $item) => !$item->equal($user))
             ->map(fn(User $user) => $user->toArray())
             ->toArray();
 

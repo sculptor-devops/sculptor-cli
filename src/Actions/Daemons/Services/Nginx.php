@@ -13,17 +13,17 @@ use Sculptor\Agent\Enums\DaemonGroupType;
 
 class Nginx implements Service
 {
-    function name(): string
+    public function name(): string
     {
         return 'nginx';
     }
 
-    function package(): string
+    public function package(): string
     {
         return 'nginx';
     }
 
-    function group(): string
+    public function group(): string
     {
         return DaemonGroupType::WEB;
     }

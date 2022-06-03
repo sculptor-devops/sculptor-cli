@@ -13,17 +13,17 @@ use Sculptor\Agent\Enums\DaemonGroupType;
 
 class Redis implements Service
 {
-    function name(): string
+    public function name(): string
     {
         return 'redis';
     }
 
-    function package(): string
+    public function package(): string
     {
         return 'redis-server';
     }
 
-    function group(): string
+    public function group(): string
     {
         return DaemonGroupType::QUEUE;
     }

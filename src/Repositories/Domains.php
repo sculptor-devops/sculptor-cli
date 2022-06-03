@@ -20,12 +20,12 @@ class Domains extends Repository
     /**
      * @throws Exception
      */
-    function path(): string
+    public function path(): string
     {
         return $this->folders->domains();
     }
 
-    function name(): string
+    public function name(): string
     {
         return 'domain';
     }
@@ -33,12 +33,12 @@ class Domains extends Repository
     /**
      * @throws InvalidConfigurationException
      */
-    function make(YmlFile $file): Domain
+    public function make(YmlFile $file): Domain
     {
         return new Domain($this->configuration, $file);
     }
 
-    function create(string $name, array $fields = null): Domain
+    public function create(string $name, array $fields = null): Domain
     {
         foreach ($this->all() as $domain) {
             if (Str::contains($domain->aliases, $name)) {
@@ -62,7 +62,7 @@ class Domains extends Repository
         $item = parent::find($name);
 
         if (!$item->validate()) {
-            throw new Exception("Invalid domain data {$item->name()} missing " . join(', ', $item->missing()) );
+            throw new Exception("Invalid domain data {$item->name()} missing " . join(', ', $item->missing()));
         }
 
         return $item;

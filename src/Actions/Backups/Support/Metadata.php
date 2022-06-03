@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sculptor\Agent\Actions\Backups\Support;
-
 
 use Exception;
 use Sculptor\Agent\Configuration;

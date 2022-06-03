@@ -24,7 +24,7 @@ class Deploy
     /**
      * @throws Exception
      */
-    public function run(): array
+    public function __invoke(): array
     {
         $result = [];
 

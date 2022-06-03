@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sculptor\Agent\Repositories;
-
 
 use Exception;
 use Sculptor\Agent\Exceptions\InvalidConfigurationException;
@@ -22,12 +20,12 @@ class Alarms extends Repository
     /**
      * @throws Exception
      */
-    function path(): string
+    public function path(): string
     {
         return $this->folders->alarms();
     }
 
-    function name(): string
+    public function name(): string
     {
         return 'alarm';
     }
@@ -35,12 +33,12 @@ class Alarms extends Repository
     /**
      * @throws InvalidConfigurationException
      */
-    function make(YmlFile $file): Alarm
+    public function make(YmlFile $file): Alarm
     {
         return new Alarm($this->configuration, $file);
     }
 
-    function create(string $name, array $fields = null): Alarm
+    public function create(string $name, array $fields = null): Alarm
     {
         $alarm = parent::create($name, $fields);
 
@@ -72,7 +70,7 @@ class Alarms extends Repository
         $item = parent::find($name);
 
         if (!$item->validate()) {
-            throw new Exception("Invalid alarm data {$item->name()} missing " . join(', ', $item->missing()) );
+            throw new Exception("Invalid alarm data {$item->name()} missing " . join(', ', $item->missing()));
         }
 
         return $item;

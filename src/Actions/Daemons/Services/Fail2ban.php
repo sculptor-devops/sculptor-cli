@@ -13,17 +13,17 @@ use Sculptor\Agent\Enums\DaemonGroupType;
 
 class Fail2ban implements Service
 {
-    function name(): string
+    public function name(): string
     {
         return 'fail2ban';
     }
 
-    function package(): string
+    public function package(): string
     {
         return 'fail2ban';
     }
 
-    function group(): string
+    public function group(): string
     {
         return DaemonGroupType::REMOTE;
     }

@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sculptor\Agent\Support\Version;
-
 
 use Sculptor\Agent\Support\Filesystem;
 use Sculptor\Foundation\Contracts\Runner;

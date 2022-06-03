@@ -26,7 +26,7 @@ class Auto extends Validable implements Rearm
         return $current;
     }
 
-    function parameters(Parameters $parameters): Rearm
+    public function parameters(Parameters $parameters): Rearm
     {
         parent::parameters($parameters);
 

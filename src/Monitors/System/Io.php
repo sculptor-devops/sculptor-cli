@@ -47,7 +47,7 @@ class Io implements Monitor
 
         $payload = json_decode($result, true);
 
-        $stats = Arr::get( $payload, 'sysstat.hosts.0.statistics', []);
+        $stats = Arr::get($payload, 'sysstat.hosts.0.statistics', []);
 
         foreach (Arr::get($stats, '0.disk', []) as $disk) {
             if ($disk['disk_device'] == $device) {

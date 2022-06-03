@@ -8,7 +8,6 @@ use League\Flysystem\ZipArchive\ZipArchiveAdapter;
 use Sculptor\Agent\Actions\Backups\Archives\Local;
 use Sculptor\Agent\Actions\Backups\Contracts\Compression;
 
-
 /**
  * (c) Alessandro Cappellozza <alessandro.cappellozza@gmail.com>
  *  For the full copyright and license information, please view the LICENSE

@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sculptor\Agent\Actions\Backups;
-
 
 use Exception;
 use Sculptor\Agent\Actions\Backups\Factories\Archives;

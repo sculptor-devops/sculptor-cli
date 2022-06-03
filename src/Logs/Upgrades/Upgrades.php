@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\File;
 use Illuminate\Support\Str;
 use Sculptor\Foundation\Services\Daemons;
 use Sculptor\Agent\Logs\Upgrades\Upgrade;
+
 /*
  * (c) Alessandro Cappellozza <alessandro.cappellozza@gmail.com>
  *  For the full copyright and license information, please view the LICENSE

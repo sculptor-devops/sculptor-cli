@@ -2,7 +2,6 @@
 
 namespace Sculptor\Agent\Validation\Validators;
 
-
 use Sculptor\Agent\Actions\Backups\Factories\Rotations;
 
 /**

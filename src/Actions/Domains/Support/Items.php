@@ -37,7 +37,7 @@ class Items
 
     public function delete(int $index): Items
     {
-        $this->items= collect($this->items)->except($index)->toArray();
+        $this->items = collect($this->items)->except($index)->toArray();
 
         return $this;
     }

@@ -26,7 +26,7 @@ class Manual extends Validable implements Rearm
         return 'manual';
     }
 
-    function parameters(Parameters $parameters): Rearm
+    public function parameters(Parameters $parameters): Rearm
     {
         parent::parameters($parameters);
 

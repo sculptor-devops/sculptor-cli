@@ -2,7 +2,6 @@
 
 namespace Sculptor\Agent\Actions\Webhook\Support;
 
-
 use Exception;
 use Illuminate\Support\Facades\DB;
 use Sculptor\Agent\Configuration;

@@ -13,17 +13,17 @@ use Sculptor\Agent\Enums\DaemonGroupType;
 
 class Ssh implements Service
 {
-    function name(): string
+    public function name(): string
     {
         return 'ssh';
     }
 
-    function package(): string
+    public function package(): string
     {
         return 'openssh-server';
     }
 
-    function group(): string
+    public function group(): string
     {
         return DaemonGroupType::REMOTE;
     }

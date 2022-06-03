@@ -10,9 +10,9 @@ namespace Sculptor\Agent\Actions\Contracts;
 
 interface Service
 {
-    function name(): string;
+    public function name(): string;
 
-    function package(): string;
+    public function package(): string;
 
-    function group(): string;
+    public function group(): string;
 }

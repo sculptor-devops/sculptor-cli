@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sculptor\Agent\Actions\Domains\Stages;
-
 
 use Exception;
 use Sculptor\Agent\Actions\Contracts\Domain as DomainInterface;

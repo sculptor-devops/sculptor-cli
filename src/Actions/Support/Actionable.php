@@ -10,5 +10,4 @@ namespace Sculptor\Agent\Actions\Support;
 
 trait Actionable
 {
-
 }

@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sculptor\Agent\Actions\Alarms\Support;
-
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;

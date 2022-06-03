@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Sculptor\Agent\Actions\Domains\Stages;
 
 use Exception;
@@ -13,6 +12,7 @@ use Sculptor\Agent\Repositories\Entities\Domain as Entity;
 use Sculptor\Agent\Actions\Contracts\Domain as DomainInterface;
 use Sculptor\Agent\Support\Filesystem;
 use Sculptor\Agent\Support\System;
+
 use function React\Promise\reject;
 
 /**
@@ -42,7 +42,7 @@ class Crontab implements DomainInterface
      */
     public function delete(Entity $domain, array $options = null): array
     {
-        $this->debug($domain, $options,'delete');
+        $this->debug($domain, $options, 'delete');
 
         $this->update($domain, true);
 
@@ -54,7 +54,7 @@ class Crontab implements DomainInterface
      */
     public function prepare(Entity $domain, array $options = null): array
     {
-        $this->debug($domain, $options,'prepare');
+        $this->debug($domain, $options, 'prepare');
 
         $this->update($domain);
 
@@ -66,7 +66,7 @@ class Crontab implements DomainInterface
      */
     public function deploy(Entity $domain, array $options = null): array
     {
-        $this->debug($domain, $options,'deploy');
+        $this->debug($domain, $options, 'deploy');
 
         $this->update($domain);
 

@@ -29,14 +29,14 @@ class Security extends Validable implements Subject
     /**
      * @throws Exception|GuzzleException
      */
-    function value(): float
+    public function value(): float
     {
         $name = Str::of($this->parameters->get('name'))->lower() . '';
 
         return count($this->security->run($name));
     }
 
-    function parameters(Parameters $parameters): Subject
+    public function parameters(Parameters $parameters): Subject
     {
         parent::parameters($parameters);
 

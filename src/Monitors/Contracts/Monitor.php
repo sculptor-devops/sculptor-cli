@@ -12,7 +12,7 @@ use Sculptor\Agent\Configuration;
 
 interface Monitor
 {
-    function values(Configuration $configuration): array;
+    public function values(Configuration $configuration): array;
 
     public function name(): string;
 }

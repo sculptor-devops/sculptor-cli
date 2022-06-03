@@ -2,7 +2,6 @@
 
 namespace Sculptor\Agent\Actions\Domains;
 
-
 use Exception;
 use Sculptor\Agent\Actions\Domains\Stages\Certificates;
 use Sculptor\Agent\Actions\Domains\Stages\Bin;

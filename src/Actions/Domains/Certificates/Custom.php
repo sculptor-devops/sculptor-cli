@@ -20,27 +20,27 @@ class Custom implements Certificate
         //
     }
 
-    function name(): string
+    public function name(): string
     {
         return CertificatesTypes::CUSTOM;
     }
 
-    function register(Domain $domain, int $days = 3650): void
+    public function register(Domain $domain, int $days = 3650): void
     {
         // TODO: Implement register() method.
     }
 
-    function pre(Domain $domain): void
+    public function pre(Domain $domain): void
     {
         // TODO: Implement pre() method.
     }
 
-    function deploy(Domain $domain): void
+    public function deploy(Domain $domain): void
     {
         // TODO: Implement deploy() method.
     }
 
-    function delete(Domain $domain): void
+    public function delete(Domain $domain): void
     {
         // TODO: Implement delete() method.
     }
@@ -48,7 +48,7 @@ class Custom implements Certificate
     /**
      * @throws Exception
      */
-    function files(Domain $domain): array
+    public function files(Domain $domain): array
     {
         return [
             'certificate' => $domain->certs("{$domain->name()}.crt"),

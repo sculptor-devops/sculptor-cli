@@ -46,11 +46,11 @@ class Delta extends Validable implements Condition
             'greaterequal', 'gte' => $delta >= $threshold,
             'lessequal', 'lte' => $delta <= $threshold,
             'different', 'dif' => $delta != $threshold,
-            default => Throw new InvalidArgumentException("Invalid delta condition $condition")
+            default => throw new InvalidArgumentException("Invalid delta condition $condition")
         };
     }
 
-    function parameters(Parameters $parameters): Condition
+    public function parameters(Parameters $parameters): Condition
     {
         parent::parameters($parameters);
 

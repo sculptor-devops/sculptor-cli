@@ -3,15 +3,11 @@
 namespace Tests\Unit;
 
 use Exception;
-use Illuminate\Support\Facades\Http;
-use InvalidArgumentException;
 use Sculptor\Agent\Actions\Alarms\Factories\Subjects;
 use Sculptor\Agent\Actions\Alarms\Support\Context;
-use Sculptor\Agent\Actions\Alarms\Support\Parameters;
 use Sculptor\Agent\Actions\Backups\Archive;
 use Sculptor\Agent\Repositories\Alarms;
 use Sculptor\Agent\Repositories\Backups;
-use Sculptor\Agent\Support\Chronometer;
 use Sculptor\Foundation\Contracts\Runner;
 use Sculptor\Foundation\Database\MySql as MySqlInterface;
 use Tests\Dummy\MySql;

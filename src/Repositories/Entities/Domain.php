@@ -63,7 +63,7 @@ class Domain extends Entity implements EntityInterface
      "deploy.install",
      //"crontab",
      //"workers",
-   ];
+    ];
 
     /**
      * @throws InvalidConfigurationException
@@ -94,7 +94,7 @@ class Domain extends Entity implements EntityInterface
      */
     public function configs(?string $filename = null): string
     {
-        return $this->compose( 'configs', $filename);
+        return $this->compose('configs', $filename);
     }
 
     /**
@@ -102,7 +102,7 @@ class Domain extends Entity implements EntityInterface
      */
     public function bin(?string $filename = null): string
     {
-        return $this->compose( 'bin', $filename);
+        return $this->compose('bin', $filename);
     }
 
     /**
@@ -118,7 +118,7 @@ class Domain extends Entity implements EntityInterface
      */
     public function shared(?string $filename = null): string
     {
-        return $this->compose( 'shared', $filename);
+        return $this->compose('shared', $filename);
     }
 
     /**

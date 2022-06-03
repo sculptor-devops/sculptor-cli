@@ -14,7 +14,7 @@ interface Subject
 {
     public function name(): string;
 
-    function value(): float;
+    public function value(): float;
 
-    function parameters( Parameters $parameters): Subject;
+    public function parameters(Parameters $parameters): Subject;
 }

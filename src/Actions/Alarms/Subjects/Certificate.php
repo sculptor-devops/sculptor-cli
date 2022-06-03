@@ -29,7 +29,7 @@ class Certificate extends Validable implements Subject
     /**
      * @throws Exception
      */
-    function value(): float
+    public function value(): float
     {
         $domain = $this->parameters->get('domain');
 
@@ -40,7 +40,7 @@ class Certificate extends Validable implements Subject
         return $certificate->isValid() && $certificate->expirationDate()->diffInDays() > $days;
     }
 
-    function parameters(Parameters $parameters): Subject
+    public function parameters(Parameters $parameters): Subject
     {
         parent::parameters($parameters);
 

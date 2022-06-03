@@ -14,7 +14,7 @@ use Sculptor\Agent\Actions\Alarms\Support\Validable;
  *  file that was distributed with this source code.
 */
 
-class Webhook extends Validable  implements Method
+class Webhook extends Validable implements Method
 {
     public array $properties = [
         'url',
@@ -31,7 +31,7 @@ class Webhook extends Validable  implements Method
         return 'webhook';
     }
 
-    function parameters(Parameters $parameters): Method
+    public function parameters(Parameters $parameters): Method
     {
         parent::parameters($parameters);
 

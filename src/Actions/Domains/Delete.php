@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Sculptor\Agent\Actions\Domains;
 
 use Exception;

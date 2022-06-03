@@ -25,7 +25,7 @@ class LetsEncrypt implements Certificate
         //
     }
 
-    function name(): string
+    public function name(): string
     {
         return CertificatesTypes::LETS_ENCRYPT;
     }
@@ -33,7 +33,7 @@ class LetsEncrypt implements Certificate
     /**
      * @throws Exception
      */
-    function register(Domain $domain, int $days = 3650): void
+    public function register(Domain $domain, int $days = 3650): void
     {
         $command = collect([
             'certbot',
@@ -73,7 +73,7 @@ class LetsEncrypt implements Certificate
             ->run($domain->root('certs'), $command->toArray());
     }
 
-    function pre(Domain $domain): void
+    public function pre(Domain $domain): void
     {
         // TODO: Implement pre() method.
     }
@@ -81,7 +81,7 @@ class LetsEncrypt implements Certificate
     /**
      * @throws Exception
      */
-    function deploy(Domain $domain): void
+    public function deploy(Domain $domain): void
     {
         $this->copy($domain);
     }
@@ -89,7 +89,7 @@ class LetsEncrypt implements Certificate
     /**
      * @throws Exception
      */
-    function delete(Domain $domain): void
+    public function delete(Domain $domain): void
     {
         $this->system
             ->run($domain->root('certs'), [
@@ -104,7 +104,7 @@ class LetsEncrypt implements Certificate
      * @throws Exception
      */
     #[ArrayShape(['certificate' => "string", 'certificate.chain' => "string", 'certificate.full' => "string", 'certificate.key' => "string"])]
-    function files(Domain $domain): array
+    public function files(Domain $domain): array
     {
         $path = "{$this->folders->etc()}/letsencrypt/live/{$domain->name()}";
 

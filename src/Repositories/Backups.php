@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sculptor\Agent\Repositories;
-
 
 use Exception;
 use Sculptor\Agent\Exceptions\InvalidConfigurationException;
@@ -21,12 +19,12 @@ class Backups extends Repository
     /**
      * @throws Exception
      */
-    function path(): string
+    public function path(): string
     {
         return $this->folders->backups();
     }
 
-    function name(): string
+    public function name(): string
     {
         return 'backup';
     }
@@ -34,12 +32,12 @@ class Backups extends Repository
     /**
      * @throws InvalidConfigurationException
      */
-    function make(YmlFile $file): Backup
+    public function make(YmlFile $file): Backup
     {
         return new Backup($this->configuration, $file);
     }
 
-    function create(string $name, array $fields = null): Backup
+    public function create(string $name, array $fields = null): Backup
     {
         $backup = parent::create($name, $fields);
 
@@ -71,7 +69,7 @@ class Backups extends Repository
         $item = parent::find($name);
 
         if (!$item->validate()) {
-            throw new Exception("Invalid backup data {$item->name()} missing " . join(', ', $item->missing()) );
+            throw new Exception("Invalid backup data {$item->name()} missing " . join(', ', $item->missing()));
         }
 
         return $item;

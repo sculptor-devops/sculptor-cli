@@ -35,7 +35,7 @@ class Logrotate implements DomainInterface
      */
     public function delete(Entity $domain, array $options = null): array
     {
-        $this->debug($domain, $options,'delete');
+        $this->debug($domain, $options, 'delete');
 
         Filesystem::deleteIfExists("{$this->folders->etc()}/logrotate.d/{$domain->name()}.conf");
 
@@ -47,7 +47,7 @@ class Logrotate implements DomainInterface
      */
     public function prepare(Entity $domain, array $options = null): array
     {
-        $this->debug($domain, $options,'prepare');
+        $this->debug($domain, $options, 'prepare');
 
         $template = Filesystem::get($domain->configs('logrotate.conf'));
 
@@ -70,7 +70,7 @@ class Logrotate implements DomainInterface
 
     public function deploy(Entity $domain, array $options = null): array
     {
-        $this->debug($domain, $options,'deploy');
+        $this->debug($domain, $options, 'deploy');
 
         return $options ?? [];
     }

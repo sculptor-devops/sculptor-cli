@@ -9,14 +9,13 @@ use Sculptor\Agent\Actions\Alarms\Support\Parameters;
 use Sculptor\Agent\Actions\Alarms\Support\Validable;
 use Sculptor\Agent\Support\Chronometer;
 
-
 /*
  * (c) Alessandro Cappellozza <alessandro.cappellozza@gmail.com>
  *  For the full copyright and license information, please view the LICENSE
  *  file that was distributed with this source code.
 */
 
-class ResponseTime  extends Validable implements Subject
+class ResponseTime extends Validable implements Subject
 {
     public array $properties = [
         'url',
@@ -31,7 +30,7 @@ class ResponseTime  extends Validable implements Subject
     /**
      * @throws Exception
      */
-    function value(): float
+    public function value(): float
     {
         $time = Chronometer::start();
 
@@ -40,7 +39,7 @@ class ResponseTime  extends Validable implements Subject
         return $time->elapsed();
     }
 
-    function parameters(Parameters $parameters): Subject
+    public function parameters(Parameters $parameters): Subject
     {
         parent::parameters($parameters);
 

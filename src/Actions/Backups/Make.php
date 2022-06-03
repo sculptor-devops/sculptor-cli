@@ -56,9 +56,9 @@ class Make
         try {
             $this->writeMeta($backup, $strategy->meta($backup->target), $files, $tag->meta());
 
-            $this->compress($backup,$files, $compression, $tag->compressedTemp(), $tag->meta());
+            $this->compress($backup, $files, $compression, $tag->compressedTemp(), $tag->meta());
 
-            $this->debug($backup, [],"archive {$backup->archivePath}/{$tag->archive()}");
+            $this->debug($backup, [], "archive {$backup->archivePath}/{$tag->archive()}");
 
             $archive->create($tag->archive())
                 ->put($tag->compressed(), Filesystem::get($tag->compressedTemp()));

@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sculptor\Agent\Validation\Validators;
-
 
 use App\Rules\Cron;
 use Sculptor\Agent\Validation\Contracts\ValidatorRule;

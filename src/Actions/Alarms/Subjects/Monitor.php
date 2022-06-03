@@ -34,14 +34,14 @@ class Monitor extends Validable implements Subject
     /**
      * @throws BindingResolutionException
      */
-    function value(): float
+    public function value(): float
     {
         $name = Str::of($this->parameters->get('name'))->lower() . '';
 
         return $this->monitors->find($name);
     }
 
-    function parameters(Parameters $parameters): Subject
+    public function parameters(Parameters $parameters): Subject
     {
         parent::parameters($parameters);
 
