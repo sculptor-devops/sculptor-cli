@@ -4568,16 +4568,16 @@
         },
         {
             "name": "spatie/db-dumper",
-            "version": "3.2.1",
+            "version": "3.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/db-dumper.git",
-                "reference": "e90bdffb902b43c7d76dd45dd350a54f4330fee5"
+                "reference": "129b8254b2c9f10881a754a692bd9507b09a1893"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/db-dumper/zipball/e90bdffb902b43c7d76dd45dd350a54f4330fee5",
-                "reference": "e90bdffb902b43c7d76dd45dd350a54f4330fee5",
+                "url": "https://api.github.com/repos/spatie/db-dumper/zipball/129b8254b2c9f10881a754a692bd9507b09a1893",
+                "reference": "129b8254b2c9f10881a754a692bd9507b09a1893",
                 "shasum": ""
             },
             "require": {
@@ -4615,7 +4615,7 @@
                 "spatie"
             ],
             "support": {
-                "source": "https://github.com/spatie/db-dumper/tree/3.2.1"
+                "source": "https://github.com/spatie/db-dumper/tree/3.3.0"
             },
             "funding": [
                 {
@@ -4627,7 +4627,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-06-15T13:27:17+00:00"
+            "time": "2022-09-01T20:20:26+00:00"
         },
         {
             "name": "spatie/dropbox-api",
@@ -10572,5 +10572,5 @@
         "ext-posix": "*"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.1.0"
+    "plugin-api-version": "2.3.0"
 }
